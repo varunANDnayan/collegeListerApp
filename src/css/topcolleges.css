@@ -1,0 +1,35 @@
+.clg-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Raleway", Arial, sans-serif;
+}
+
+.clg-top {
+  width: 30%;
+  min-width: 17rem;
+  height: 18rem;
+  margin: 1rem 1rem;
+  background: #f8fdf9;
+  border: 1px solid #aebbb1;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 8px #aebbb1;
+}
+
+.clg-top hr {
+  width: 50%;
+  text-align: center;
+}
+
+.clg-header {
+  font-weight: bold;
+}
+
+.clg-layout {
+  margin: 0 2rem;
+  height: 30%;
+  padding: 0.3rem 0.5rem;
+  /* position: relative; */
+  text-align: left;
+  width: 80%;
+}
