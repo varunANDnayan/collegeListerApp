@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import NavBar from "../ChildLayouts/NavBar";
 import Footer from "../ChildLayouts/Home/Footer";
@@ -10,13 +10,13 @@ import "../../../css/common.css";
 
 function ParentLayout() {
   return (
-    <BrowserRouter>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <div className={"background"}>
         <NavBar />
         <Routes />
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
