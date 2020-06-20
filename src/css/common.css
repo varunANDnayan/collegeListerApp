@@ -18,8 +18,105 @@ body {
   float: left;
 }
 
+.nav-name-mobile{
+  text-align: center;
+  position: absolute;
+  left: 35%;
+  top: 4px;
+  font-size: 20px;
+}
+
 .nav-right {
   float: right;
+}
+
+
+.slider{
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 2;
+  background-color:rgba(0,0,0,0.5);
+  height:100%;
+}
+.slider-opacity{
+  width:100%;
+}
+.slider-style{
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 5;
+  overflow:hidden;
+  background: rgb(38,4,60);
+  background: linear-gradient(4deg, rgba(38,4,60,1) 0%, rgba(255,0,0,0.8939950980392157) 50%, rgba(156,91,0,1) 97%);
+  box-shadow: 35px 7px 71px -36px rgba(8,6,8,0.67);
+  height:100%;
+  transition: width 1.2s ease-in-out ;
+}
+.slider-open{
+  width: 60%;
+}
+.slider-close{
+  width: 0%;
+}
+.slider-style.slider-close{
+  transition: width 1.2s ease-out;
+}
+.slider-content{
+  color: white;
+  transition: ease-in opacity 1s;
+}
+.open{
+  opacity:1;
+}
+.close{
+  opacity:0;
+  transition: ease-out opacity 1s;
+}
+nav .slider-content a{
+  color: black;
+}
+.menu-container{
+  padding:5px 15px;
+  border-bottom: 1px solid white;
+}
+.menu-container:hover{
+  cursor: pointer;
+}
+.close .menu-container{
+  display: none;
+}
+.burger-menu{
+  position: relative;
+  top: 1.5rem;
+  left: 1rem;
+  width: 20px;
+  z-index: 1;
+}
+.burger-menu:hover{
+  cursor: pointer;
+}
+.menu-icon{
+  height:4px;
+  margin: 2px 0;
+  background-color: white;
+}
+
+.cross-icon-container{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 40%;
+  bottom: 20px;
+  text-align: center;
+  z-index: 10;
+}
+.cross-icon{
+  background-color: rgba(0,0,0,0.6);
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
 }
 
 @media only screen and (max-width: 550px) {
