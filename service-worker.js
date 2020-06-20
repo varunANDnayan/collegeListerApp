@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/collegeListerApp/precache-manifest.d142779b0c17deebf844410ea0cbc926.js"
+  "/collegeListerApp/precache-manifest.0d1e68774069a721d69f1314fb2e6c0b.js"
 );
 
 self.addEventListener('message', (event) => {
