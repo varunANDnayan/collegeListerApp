@@ -1,4 +1,5 @@
 import React from "react";
+import ListCollegeStyle from "../../css/listofcolleges.module.css";
 
 import ListOfCollegesLayout from "./ListOfCollegesLayout";
 
@@ -18,10 +19,11 @@ function ListOfCollegesTabs(props) {
   let tabsData = <div>Loading...</div>;
   if (props.data) {
     tabsData = props.headers.map((tab, index) => {
-      let tabClass = "tabs-header";
+      let tabClass = ListCollegeStyle["tabs-header"];
       if (props.data[tab].length > 0 && selectedTab === index) {
         colleges = props.data[tab];
-        tabClass = tabClass + " selected";
+        tabClass = `${tabClass}  ${ListCollegeStyle["selected"]}`;
+        console.log("Tab class", tabClass);
       }
       // console.log("clg", typeof colleges);
 
@@ -42,8 +44,8 @@ function ListOfCollegesTabs(props) {
 
   return (
     <>
-      <div className="tabs-container">{tabsData}</div>
-      <div className={classes}>
+      <div className={ListCollegeStyle["tabs-container"]}>{tabsData}</div>
+      <div className={ListCollegeStyle[classes]}>
         <ListOfCollegesLayout colleges={colleges} />
       </div>
     </>

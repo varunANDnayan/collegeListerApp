@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../../css/topcolleges.css";
+import TopCollegeStyle from "../../css/topcolleges.module.css";
 
 import TopCollegesHeader from "./TopCollegesHeader";
 
@@ -40,7 +40,7 @@ function TopCollegesParent(props) {
   return (
     <div>
       <h3 className="center">Top Colleges</h3>
-      <div className="clg-wrapper">{collegeList}</div>
+      <div className={TopCollegeStyle["clg-wrapper"]}>{collegeList}</div>
     </div>
   );
 }

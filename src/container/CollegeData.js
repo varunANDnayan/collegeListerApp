@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import dataList from './data/topCollegesList.json';
-import "../css/topcolleges.css";
+import dataList from "./data/topCollegesList.json";
 
 import TopCollegesParent from "../components/TopColleges/TopCollegesParent";
 //import ListOfCollegesParent from "../components/ListOfColleges/ListOfCollegesParent";
@@ -11,7 +10,7 @@ class CollegeData extends Component {
     colleges: {},
   };
   componentDidMount() {
-    this.setState({ colleges:{...dataList[0]} });
+    this.setState({ colleges: { ...dataList[0] } });
   }
   render() {
     return (

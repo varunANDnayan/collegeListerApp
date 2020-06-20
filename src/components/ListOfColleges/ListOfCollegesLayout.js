@@ -1,6 +1,6 @@
 import React from "react";
 import ReactHtmlParser from "react-html-parser";
-import "../../css/listofcolleges.css";
+import ListCollegeStyle from "../../css/listofcolleges.module.css";
 
 function ListOfCollegesLayout(props) {
   console.log("child", props);
@@ -32,25 +32,34 @@ function ListOfCollegesLayout(props) {
         '<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;';
 
     return (
-      <div className="clg-list">
-        <div className="clg-list-image">
+      <div className={ListCollegeStyle["clg-list"]}>
+        <div className={ListCollegeStyle["clg-list-image"]}>
           <img src={college.logo} alt={college.name} />
         </div>
-        <div className="clg-list-content">
-          <div className="clg-list-name">{college.name}</div>
-          <div className="clg-list-info">{college.info}</div>
-          <div className="clg-list-loc">{college.location}</div>
+        <div className={ListCollegeStyle["clg-list-content"]}>
+          <div className={ListCollegeStyle["clg-list-name"]}>
+            {college.name}
+          </div>
+          <div className={ListCollegeStyle["clg-list-info"]}>
+            {college.info}
+          </div>
+          <div className={ListCollegeStyle["clg-list-loc"]}>
+            {college.location}
+          </div>
         </div>
-        <div className="clg-list-details">
-          <div className="clg-list-rate">
+        <div className={ListCollegeStyle["clg-list-details"]}>
+          <div className={ListCollegeStyle["clg-list-rate"]}>
             <p>Rating:</p>
             <span>{ReactHtmlParser(starClass)}</span>
             <p>({college.rating})</p>
           </div>
 
-          <div className="clg-list-btn">
+          <div className={ListCollegeStyle["clg-list-btn"]}>
             {console.log(college.link)}
-            <button class="clg-btn" onClick={() => openUrl(college.link)}>
+            <button
+              class={ListCollegeStyle["clg-btn"]}
+              onClick={() => openUrl(college.link)}
+            >
               Visit
             </button>
           </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import "../../css/listofcolleges.css";
 import "../../css/common.css";
 
 import ListOfCollegesTabs from "./ListOfCollegesTabs";
