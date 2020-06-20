@@ -1,5 +1,7 @@
 import React from "react";
 import ReactHtmlParser from "react-html-parser";
+import "../../css/common.css";
+
 import ListCollegeStyle from "../../css/listofcolleges.module.css";
 
 function ListOfCollegesLayout(props) {
