@@ -10,8 +10,7 @@ const [SliderClasses,setSliderClass] = React.useState({
     sliderContentClass : sliderStatus? 'slider-content open':'slider-content close'
 })
 
-let MenuConatiner = [{
-    path: '/',
+const[MenuConatiner,updateMenu] =React.useState( [{
     title: "Home",
     child:[{
         path:'/',
@@ -31,7 +30,22 @@ let MenuConatiner = [{
 },{
     path: '/about',
     title: "About"
-}];
+}]);
+
+useEffect(()=>{
+    updateMenuChildDisplay();
+},[]);
+
+const updateMenuChildDisplay = (title)=>{
+    let dummyMenu = [...MenuConatiner];
+    dummyMenu.map((menu,$index)=>{
+        if(menu.title == title || menu.child){
+            dummyMenu[$index].childVisible = dummyMenu[$index].childVisible != undefined?!dummyMenu[$index].childVisible:false;
+        }
+    });
+    updateMenu(dummyMenu);
+}
+
 
 const childIteration = (child) =>{
     let childAsset =''
@@ -55,13 +69,23 @@ const childIteration = (child) =>{
 //2 Level Menu Display
 let menuDisplay = MenuConatiner.map((menu)=>{
     let child = '';
+    let childVisiblity ='';
     if(menu.child && menu.child.length > 0){
-        child = childIteration(menu.child);
+        child = childIteration(menu.child,menu.isVisible);
+        if(menu.childVisible != undefined){
+            if(menu.childVisible){
+                childVisiblity = 'open-child';
+            }else{
+                childVisiblity = 'close-child';
+            }
+        }
     }
     return (
-        <div className="menu-container" onClick={() =>{changeMenu(menu.path)}}>
-           { menu.title}
-           {child}
+        <div className="menu-container" onClick={() =>{changeMenu(menu.path,menu.title)}}>
+           {menu.title}
+            <div className={childVisiblity}>
+                {child}
+            </div>
         </div>
     )
 })
@@ -73,13 +97,18 @@ const changeStatus = ()=>{
     openCloseSlider(!sliderStatus);
 }
 
-const changeMenu = (path) =>{
-    if(props.history){
-        setTimeout(()=>{
-            props.history.push(path);
-        },0);
+const changeMenu = (path,title) =>{
+    if(path){
+        if(props.history){
+            setTimeout(()=>{
+                props.history.push(path);
+            },0);
+        }
+        changeStatus();
+    }else{
+        updateMenuChildDisplay(title);
     }
-    changeStatus();
+    
 }
 
 useEffect(()=>{

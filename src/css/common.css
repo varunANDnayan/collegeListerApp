@@ -125,6 +125,14 @@ nav .slider-content a{
   padding: 10px;
   border-radius: 50%;
 }
+.open-child{
+  display: block;
+  transition: display 1s ease-in;
+}
+.close-child{
+  display: none;
+  transition: display 1s ease-out;
+}
 
 @media only screen and (max-width: 550px) {
   .nav-container {
