@@ -12,19 +12,62 @@ const [SliderClasses,setSliderClass] = React.useState({
 
 let MenuConatiner = [{
     path: '/',
-    title: "Home"
+    title: "Home",
+    child:[{
+        path:'/',
+        title:'test',
+        child:[{
+            path:'/',
+            title:'level2',
+            child: [{
+                path:'/',
+                title:'level3'
+            }]
+        }]
+    },{
+        path:'/',
+        title:'test'
+    }]
 },{
     path: '/about',
     title: "About"
 }];
 
+const childIteration = (child) =>{
+    let childAsset =''
+    childAsset = child.map((children,$index)=>{
+        let subMenu = '';
+        if(children.child && children.child.length > 0){
+            subMenu = childIteration(children.child);
+        }
+        let classApplied = 'menu-child-conatiner'
+        if($index != child.length-1){
+            classApplied = classApplied+" menu-seprator";
+        }
+        return(<li className={classApplied} onClick={() =>{changeMenu(children.path)}}>
+            {children.title} 
+            {subMenu}
+        </li>)
+    })
+    return childAsset;
+}
+
+//2 Level Menu Display
 let menuDisplay = MenuConatiner.map((menu)=>{
+    let child = '';
+    if(menu.child && menu.child.length > 0){
+        child = childIteration(menu.child);
+    }
     return (
         <div className="menu-container" onClick={() =>{changeMenu(menu.path)}}>
            { menu.title}
+           {child}
         </div>
     )
 })
+
+
+
 
 const changeStatus = ()=>{
     openCloseSlider(!sliderStatus);
