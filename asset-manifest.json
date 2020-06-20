@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/collegeListerApp/static/css/main.48daf24b.chunk.css",
+    "main.css": "/collegeListerApp/static/css/main.69dff848.chunk.css",
     "main.js": "/collegeListerApp/static/js/main.5e673b16.chunk.js",
     "main.js.map": "/collegeListerApp/static/js/main.5e673b16.chunk.js.map",
     "runtime-main.js": "/collegeListerApp/static/js/runtime-main.073e428f.js",
@@ -9,17 +9,17 @@
     "static/js/2.d855562f.chunk.js": "/collegeListerApp/static/js/2.d855562f.chunk.js",
     "static/js/2.d855562f.chunk.js.map": "/collegeListerApp/static/js/2.d855562f.chunk.js.map",
     "index.html": "/collegeListerApp/index.html",
-    "precache-manifest.e8b93a3e6bef940f40c62b59f57b29a2.js": "/collegeListerApp/precache-manifest.e8b93a3e6bef940f40c62b59f57b29a2.js",
+    "precache-manifest.8d3e7875fe2d971bb6da04c823d82852.js": "/collegeListerApp/precache-manifest.8d3e7875fe2d971bb6da04c823d82852.js",
     "service-worker.js": "/collegeListerApp/service-worker.js",
     "static/css/2.afd40c00.chunk.css.map": "/collegeListerApp/static/css/2.afd40c00.chunk.css.map",
-    "static/css/main.48daf24b.chunk.css.map": "/collegeListerApp/static/css/main.48daf24b.chunk.css.map",
+    "static/css/main.69dff848.chunk.css.map": "/collegeListerApp/static/css/main.69dff848.chunk.css.map",
     "static/js/2.d855562f.chunk.js.LICENSE.txt": "/collegeListerApp/static/js/2.d855562f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.073e428f.js",
     "static/css/2.afd40c00.chunk.css",
     "static/js/2.d855562f.chunk.js",
-    "static/css/main.48daf24b.chunk.css",
+    "static/css/main.69dff848.chunk.css",
     "static/js/main.5e673b16.chunk.js"
   ]
 }
