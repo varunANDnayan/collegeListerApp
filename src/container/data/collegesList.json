@@ -1,0 +1,123 @@
+ [
+      {
+        "id": 101,
+        "name": "Indian Institute of Technology Bombay",
+        "info": "IIT Bombay",
+        "stream": ["Engineering"],
+        "location": "Powai",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/d/d0/IIT_Bombay_color_logo.png",
+        "image": "https://src.lafargeholcim-foundation.org/img/2dca6d36-5666-4587-9e55-07dcbccab9e1/h(true)/c(866-2.254-100-0-16.6666666666667)/iitbombay.jpg",
+        "rating": 4.6,
+        "link": "http://www.iitb.ac.in/",
+        "autonomous": true
+      },
+      {
+        "id": 102,
+        "name": "Jai Hind College",
+        "info": "Basantsing Anil Dharmada Trust",
+        "stream": ["Arts", "Commerce"],
+        "location": "Churchgate",
+        "logo": "https://images.static-collegedunia.com/public/college_data/images/logos/150512760931e614b.png",
+        "image": "https://img.collegedekhocdn.com/media/img/institute/crawled_images/None/FDHFHGHGFHFTH.jpg?tr=h-400,w-650",
+        "rating": 4.4,
+        "link": "http://www.jaihindcollege.com/",
+        "autonomous": true
+      },
+      {
+        "id": 103,
+        "name": "St Andrew's College of Arts, Science and Commerce",
+        "info": "Andrew's, SanAndreas",
+        "stream": ["Arts", "Commerce"],
+        "location": "Bandra",
+        "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQFQyk9u4Mt_jA/company-logo_200_200/0?e=2159024400&v=beta&t=uM1HQ-Cxb5QgyxiikiBI8ajXpGpKUukpDAsprK1yh9E",
+        "image": "https://standrewscollege.ac.in/wp-content/uploads/2019/05/IMG_0692-1.jpg",
+        "rating": 4.2,
+        "link": "https://standrewscollege.ac.in/",
+        "autonomous": false
+      },
+      {
+        "id": 104,
+        "name": "H.R. College of Commerce and Economics",
+        "info": "Accredited 'A' Grade by NAAC",
+        "stream": ["Commerce"],
+        "location": "Churchgate",
+        "logo": "https://images.shiksha.com/mediadata/images/1586176505phpV8QYpg.jpeg",
+        "image": "https://images.shiksha.com/mediadata/images/1552544549phpPWCWoN.jpeg",
+        "rating": 4.5,
+        "link": "https://www.hrcollege.edu/",
+        "autonomous": false
+      },
+      {
+        "id": 105,
+        "name": "Mukesh Patel School Of Technology Management & Engineering",
+        "info": "NMIMS",
+        "stream": ["Engineering"],
+        "location": "Vile Parle",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRadUXCeidw9gZFF5UDd9s9utjaZAGrkgcX7rikygYce6tOIev3&usqp=CAU",
+        "image": "https://img.collegedekhocdn.com/media/img/institute/crawled_images/Mukesh_Patel_School_of_Technology_Management__Engineering.jpg?tr=h-200,w-300",
+        "rating": 4.1,
+        "link": "https://engineering.nmims.edu/",
+        "autonomous": false
+      },
+      {
+        "id": 106,
+        "name": "Thakur College of Engineering and Technology",
+        "info": "Zagdu Singh Charitable Trust",
+        "stream": ["Engineering"],
+        "location": "Kandivali",
+        "logo": "https://image3.mouthshut.com/images/imagesp/925718678s.jpg",
+        "image": "https://images.static-collegedunia.com/public/college_data/images/campusimage/1420708054tcet.JPG",
+        "rating": 4.4,
+        "link": "https://www.tcetmumbai.in/",
+        "autonomous": false
+      },
+      {
+        "id": 107,
+        "name": "Thakur Polytechnic",
+        "info": "Zagdu Singh Charitable Trust",
+        "stream": ["Diploma"],
+        "location": "Kandivali",
+        "logo": "https://www.manbhariconstructions.co.in/wp-content/uploads/2015/12/thakur-trust-x-206-320x202.jpg",
+        "image": "https://content3.jdmagicbox.com/comp/mumbai/a1/022pxx22.xx22.170209114852.j8a1/catalogue/thakur-polytechnic-thakur-complex-kandivali-east-mumbai-6ymv7vsxzo.jpg?clr=1f3347",
+        "rating": 4.5,
+        "link": "https://www.tpolymumbai.in/",
+        "autonomous": false
+      },
+      {
+        "id": 108,
+        "name": "Topiwala National Medical College",
+        "info": "TNMC & Nair ch. Hospital",
+        "stream": ["MBBS"],
+        "location": "Kandivali",
+        "logo": "https://www.tnmcnair.com/img/NAIR.jpg",
+        "image": "https://www.tnmcnair.com/img/hospital.JPG",
+        "rating": 3.9,
+        "link": "https://www.tnmcnair.com/",
+        "autonomous": false
+      },
+      {
+        "id": 109,
+        "name": "K. J. Somaiya Medical College & Research Centre",
+        "info": "Vidyavihar University",
+        "stream": ["MBBS"],
+        "location": "Sion",
+        "logo": "http://www.somaiya-kalavidya.org/images/somaiya/img8.jpg",
+        "image": "https://www.tnmcnair.com/img/hospital.JPG",
+        "rating": 3.3,
+        "link": "https://kjsmc.somaiya.edu/kjsmc/",
+        "autonomous": false
+      },
+      {
+        "id": 110,
+        "name": "Shri Bhagubhai Mafatlal Polytechnic",
+        "info": "SVKM",
+        "stream": ["Diploma"],
+        "location": "Vile Parle",
+        "logo": "https://files.indcareer.com/files/Shri%20Bhagubhai%20Mafatlal%20Polytechnic.JPG",
+        "image": "https://images.shiksha.com/mediadata/images/1555500888phpITWB7j.jpeg",
+        "rating": 4.2,
+        "link": "http://sbmp.ac.in/",
+        "autonomous": false
+      }
+    ]
+  

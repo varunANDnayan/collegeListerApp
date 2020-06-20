@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+import dataList from './data/topCollegesList.json';
 import "../css/topcolleges.css";
 
 import TopCollegesParent from "../components/TopColleges/TopCollegesParent";
@@ -10,16 +10,9 @@ class CollegeData extends Component {
   state = {
     colleges: {},
   };
-
   componentDidMount() {
-    //Get the data from the dummy server
-    axios.get("../json/colleges.json").then((res) => {
-      // console.log("Fetched");
-      // console.log(res.data);
-      this.setState({ colleges: res.data });
-    });
+    this.setState({ colleges:{...dataList[0]} });
   }
-
   render() {
     return (
       <div>
