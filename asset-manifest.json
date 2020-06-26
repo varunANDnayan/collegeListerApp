@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/collegeListerApp/static/css/main.cb257a7c.chunk.css",
-    "main.js": "/collegeListerApp/static/js/main.b347b824.chunk.js",
-    "main.js.map": "/collegeListerApp/static/js/main.b347b824.chunk.js.map",
+    "main.css": "/collegeListerApp/static/css/main.114b0479.chunk.css",
+    "main.js": "/collegeListerApp/static/js/main.41988b99.chunk.js",
+    "main.js.map": "/collegeListerApp/static/js/main.41988b99.chunk.js.map",
     "runtime-main.js": "/collegeListerApp/static/js/runtime-main.073e428f.js",
     "runtime-main.js.map": "/collegeListerApp/static/js/runtime-main.073e428f.js.map",
     "static/css/2.afd40c00.chunk.css": "/collegeListerApp/static/css/2.afd40c00.chunk.css",
-    "static/js/2.4b3b3728.chunk.js": "/collegeListerApp/static/js/2.4b3b3728.chunk.js",
-    "static/js/2.4b3b3728.chunk.js.map": "/collegeListerApp/static/js/2.4b3b3728.chunk.js.map",
+    "static/js/2.f5e790b2.chunk.js": "/collegeListerApp/static/js/2.f5e790b2.chunk.js",
+    "static/js/2.f5e790b2.chunk.js.map": "/collegeListerApp/static/js/2.f5e790b2.chunk.js.map",
     "index.html": "/collegeListerApp/index.html",
-    "precache-manifest.0d1e68774069a721d69f1314fb2e6c0b.js": "/collegeListerApp/precache-manifest.0d1e68774069a721d69f1314fb2e6c0b.js",
+    "precache-manifest.a10fdb818d0cf56ac2db637532f91c12.js": "/collegeListerApp/precache-manifest.a10fdb818d0cf56ac2db637532f91c12.js",
     "service-worker.js": "/collegeListerApp/service-worker.js",
     "static/css/2.afd40c00.chunk.css.map": "/collegeListerApp/static/css/2.afd40c00.chunk.css.map",
-    "static/css/main.cb257a7c.chunk.css.map": "/collegeListerApp/static/css/main.cb257a7c.chunk.css.map",
-    "static/js/2.4b3b3728.chunk.js.LICENSE.txt": "/collegeListerApp/static/js/2.4b3b3728.chunk.js.LICENSE.txt"
+    "static/css/main.114b0479.chunk.css.map": "/collegeListerApp/static/css/main.114b0479.chunk.css.map",
+    "static/js/2.f5e790b2.chunk.js.LICENSE.txt": "/collegeListerApp/static/js/2.f5e790b2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.073e428f.js",
     "static/css/2.afd40c00.chunk.css",
-    "static/js/2.4b3b3728.chunk.js",
-    "static/css/main.cb257a7c.chunk.css",
-    "static/js/main.b347b824.chunk.js"
+    "static/js/2.f5e790b2.chunk.js",
+    "static/css/main.114b0479.chunk.css",
+    "static/js/main.41988b99.chunk.js"
   ]
 }
