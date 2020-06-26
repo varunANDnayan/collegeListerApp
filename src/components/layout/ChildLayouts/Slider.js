@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "../../../css/common.css";
+import menuImage from '../../../images/menulogo.png'
 
 const Slider = (props) => {
   const [sliderStatus, openCloseSlider] = React.useState(false);
@@ -172,6 +173,9 @@ const Slider = (props) => {
       </div>
       <div className={SliderClasses.sliderOpacity} onClick={changeStatus}></div>
       <div className={SliderClasses.sliderClass}>
+        <div className='menu-slider-logo'>
+          <img src={menuImage}/>
+        </div>
         <div className="cross-icon-container" onClick={changeStatus}>
           <span className="cross-icon">X</span>
         </div>
