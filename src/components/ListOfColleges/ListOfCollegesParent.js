@@ -57,7 +57,7 @@ function ListOfCollegesParent(props) {
   }
 
   return (
-    <div className="paddingB50">
+    <div className="container paddingB50">
       <h3 className="center">List of Colleges</h3>
       <ListOfCollegesTabs headers={streams} data={collegeList} />
     </div>

@@ -1,13 +1,13 @@
 import React from "react";
 
 import CollegeData from "../../../../container/CollegeData";
-import CollegeListData from "../../../../container/CollegeListData";
+// import CollegeListData from "../../../../container/CollegeListData";
 
 function Main() {
   return (
     <div className="container">
       <CollegeData />
-      <CollegeListData />
+      {/* <CollegeListData /> */}
     </div>
   );
 }
