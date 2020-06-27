@@ -146,7 +146,7 @@ const Slider = (props) => {
             changeMenu(menu.path, menu.title, $index);
           }}
         >
-          {index === $index && !child && <span class="menu-selected"></span>}
+          {menu.isSelected && !child && <span class="menu-selected"></span>}
           {iconName && iconName}
           <span className="menu-spacing">{menu.title}</span>
           {child && <span className={menu.childVisible?'menu-right-icon-open':'menu-right-icon'}>
