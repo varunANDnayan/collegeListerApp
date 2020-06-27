@@ -59,15 +59,28 @@ const Slider = (props) => {
   ]);
 
   useEffect(() => {
-    updateMenuChildDisplay();
+    let path = props.history.location.pathname;
+    MenuConatiner.map((menu)=>{
+      if(menu.path === path){
+        let dummyMenu = updateVisiblity(menu.title,MenuConatiner);
+        updateMenu(dummyMenu);
+        updateMenuChildDisplay(menu.title);
+      }
+    })
   }, []);
 
   const updateMenuChildDisplay = (title) => {
     let dummyMenu = [...MenuConatiner];
     dummyMenu.map((menu, $index) => {
+      let anyChildSelected = false;
+      if(menu.child){
+        anyChildSelected = hasAnyChildSelected(menu.child);
+      }
       if (menu.title == title || menu.child) {  
-        if(menu.title != title){
+        if(menu.title != title && !anyChildSelected){
           dummyMenu[$index].childVisible = false;
+        }else if(anyChildSelected){
+          dummyMenu[$index].childVisible = true;
         }else{
           dummyMenu[$index].childVisible =
           dummyMenu[$index].childVisible != undefined
@@ -78,6 +91,21 @@ const Slider = (props) => {
     });
     updateMenu(dummyMenu);
   };
+
+  const hasAnyChildSelected  = (obj)=>{
+    let isSelected = false;
+    obj.map((menu)=>{
+      if(menu.isSelected)
+        isSelected = true;
+      else{
+        if(menu.child){
+          let status = hasAnyChildSelected(menu.child);
+          isSelected = status? status : isSelected;
+        }
+      }
+    });
+    return isSelected;
+  }
 
   const childIteration = (child, parentIndex) => {
     let childAsset = "";
