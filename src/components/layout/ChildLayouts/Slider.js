@@ -65,7 +65,7 @@ const Slider = (props) => {
   const updateMenuChildDisplay = (title) => {
     let dummyMenu = [...MenuConatiner];
     dummyMenu.map((menu, $index) => {
-      if (menu.title == title || menu.child) {
+      if (menu.title == title || menu.child) {  
         dummyMenu[$index].childVisible =
           dummyMenu[$index].childVisible != undefined
             ? !dummyMenu[$index].childVisible
@@ -197,6 +197,7 @@ const Slider = (props) => {
           title: menu.title,
           iconName: menu.iconName,
           isSelected : menu.isSelected,
+          childVisible: menu.childVisible,
           child: [...childs]
         }
       }else{
@@ -204,7 +205,8 @@ const Slider = (props) => {
           path: menu.path,
           title: menu.title,
           isSelected: menu.isSelected,
-          iconName: menu.iconName
+          iconName: menu.iconName,
+          childVisible: menu.childVisible
         }  
       }
       return returnObj;
