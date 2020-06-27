@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { Link, withRouter } from "react-router-dom";
 import "../../../css/common.css";
-import menuImage from '../../../images/menulogo.png'
+import menuImage from '../../../images/menulogo.png';
+import { FaHome,FaChevronRight,FaRegBuilding,FaInfoCircle } from "react-icons/fa";
 
 const Slider = (props) => {
   const [sliderStatus, openCloseSlider] = React.useState(false);
@@ -21,6 +22,7 @@ const Slider = (props) => {
   const [MenuConatiner, updateMenu] = React.useState([
     {
       title: "Home",
+      iconName: 'FaHome',
       child: [
         {
           path: "/",
@@ -40,17 +42,19 @@ const Slider = (props) => {
         },
         {
           path: "/",
-          title: "test",
+          title: "test5",
         },
       ],
     },
     {
       path: "/colleges",
       title: "Colleges",
+      iconName: 'FaRegBuilding'
     },
     {
       path: "/about",
       title: "About",
+      iconName: 'FaInfoCircle'
     },
   ]);
 
@@ -83,23 +87,45 @@ const Slider = (props) => {
         classApplied = classApplied + " menu-seprator";
       }
       return (
+      <div>
         <li
           className={classApplied}
           onClick={() => {
-            changeMenu(children.path, null, parentIndex);
+            changeMenu(children.path, children.title, parentIndex);
           }}
         >
+          {children.isSelected && <span class="menu-selected"></span>}
           {children.title}
-          {subMenu}
         </li>
+        {subMenu && <span>
+          {subMenu}
+        </span>
+        }
+      </div>
       );
     });
     return childAsset;
   };
 
+  const getMenuIcon = (iconName) =>{
+    switch(iconName){
+      case 'FaHome':
+        return <FaHome />;
+      case 'FaRegBuilding':
+        return <FaRegBuilding />
+      case 'FaInfoCircle':
+        return <FaInfoCircle />
+      default : 
+        return null ;
+    }
+  }
+
+
+
   //2 Level Menu Display
   let menuDisplay = MenuConatiner.map((menu, $index) => {
     let child = "";
+    let iconName = getMenuIcon(menu.iconName);
     let childVisiblity = "";
     if (menu.child && menu.child.length > 0) {
       //index passed
@@ -113,17 +139,23 @@ const Slider = (props) => {
       }
     }
     return (
-      <div
-        className={
-          index === $index ? "menu-container menu-selected" : "menu-container"
-        }
-        onClick={() => {
-          changeMenu(menu.path, menu.title, $index);
-        }}
-      >
-        {menu.title}
+      <div>
+        <div
+          className="menu-container"
+          onClick={() => {
+            changeMenu(menu.path, menu.title, $index);
+          }}
+        >
+          {index === $index && !child && <span class="menu-selected"></span>}
+          {iconName && iconName}
+          <span className="menu-spacing">{menu.title}</span>
+          {child && <span className={menu.childVisible?'menu-right-icon-open':'menu-right-icon'}>
+            <FaChevronRight />
+          </span>}
+        </div>
         <div className={childVisiblity}>{child}</div>
       </div>
+      
     );
   });
 
@@ -138,12 +170,47 @@ const Slider = (props) => {
           props.history.push(path);
         }, 0);
       }
-      updateIndex((index = $index));
+      let dummyMenu = updateVisiblity(title,MenuConatiner);
+      updateMenu(dummyMenu);
       changeStatus();
     } else {
       updateMenuChildDisplay(title);
     }
   };
+
+  const updateVisiblity = (title,menuObject)=>{
+    let updatedValues = {}
+    updatedValues = menuObject.map((menu) =>{
+      let childs =''
+      if(menu.child){
+        childs = updateVisiblity(title,menu.child);
+      }
+      if(menu.title == title){
+        menu.isSelected = true;
+      }else{
+        menu.isSelected = false;
+      }
+      let returnObj = {};
+      if(childs){
+        returnObj = {
+          path: menu.path,
+          title: menu.title,
+          iconName: menu.iconName,
+          isSelected : menu.isSelected,
+          child: [...childs]
+        }
+      }else{
+        returnObj = {
+          path: menu.path,
+          title: menu.title,
+          isSelected: menu.isSelected,
+          iconName: menu.iconName
+        }  
+      }
+      return returnObj;
+    });
+    return updatedValues;
+  }
 
   useEffect(() => {
     let dummySLiderClass = { ...SliderClasses };
@@ -157,9 +224,8 @@ const Slider = (props) => {
       ? "slider-content open"
       : "slider-content close";
     setSliderClass(dummySLiderClass);
-
-    if (sliderStatus) document.body.style.position = "fixed";
-    return () => (document.body.style.position = "unset");
+    if (sliderStatus) document.body.style.overflow = "hidden";
+    return () => (document.body.style.overflow = "unset");
   }, [sliderStatus]);
 
   return (
@@ -176,6 +242,7 @@ const Slider = (props) => {
         <div className='menu-slider-logo'>
           <img src={menuImage}/>
         </div>
+        <div className="quote-holder">"It's not what you achieve, it's what you overcome"</div>
         <div className="cross-icon-container" onClick={changeStatus}>
           <span className="cross-icon">X</span>
         </div>
