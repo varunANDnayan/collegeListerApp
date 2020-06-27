@@ -66,10 +66,14 @@ const Slider = (props) => {
     let dummyMenu = [...MenuConatiner];
     dummyMenu.map((menu, $index) => {
       if (menu.title == title || menu.child) {  
-        dummyMenu[$index].childVisible =
+        if(menu.title != title){
+          dummyMenu[$index].childVisible = false;
+        }else{
+          dummyMenu[$index].childVisible =
           dummyMenu[$index].childVisible != undefined
             ? !dummyMenu[$index].childVisible
             : false;
+        }
       }
     });
     updateMenu(dummyMenu);
@@ -173,9 +177,8 @@ const Slider = (props) => {
       let dummyMenu = updateVisiblity(title,MenuConatiner);
       updateMenu(dummyMenu);
       changeStatus();
-    } else {
-      updateMenuChildDisplay(title);
-    }
+    } 
+    updateMenuChildDisplay(title);
   };
 
   const updateVisiblity = (title,menuObject)=>{
