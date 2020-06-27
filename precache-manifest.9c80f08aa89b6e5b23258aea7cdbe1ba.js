@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f0c60b3faab1a8f78082d04b8c5a6d59",
+    "revision": "c758db062a3348ca7ea0903dc8509eb7",
     "url": "/collegeListerApp/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/collegeListerApp/static/css/2.afd40c00.chunk.css"
   },
   {
-    "revision": "762f7dac4a0737835072",
+    "revision": "26b02629c133b8fdbb53",
     "url": "/collegeListerApp/static/css/main.faeb20e7.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/collegeListerApp/static/js/2.eade0976.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "762f7dac4a0737835072",
-    "url": "/collegeListerApp/static/js/main.26086d72.chunk.js"
+    "revision": "26b02629c133b8fdbb53",
+    "url": "/collegeListerApp/static/js/main.efdd099d.chunk.js"
   },
   {
     "revision": "f11be45bdb0fc3039ceb",
